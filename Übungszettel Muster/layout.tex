@@ -1,0 +1,20 @@
+\usepackage{geometry}
+\usepackage{microtype}
+\geometry{left=25mm,right=25mm,top=25mm,bottom=25mm,footskip=15mm}
+\usepackage[footsepline]{scrpage2}
+% Let's hack the rule command to let us fill the rest of the line
+\newcommand{\hackedrule}[2][0em]{\leaders\hbox{\rule[#1]{1pt}{#2}}\hfill}
+% Now hack the markcommand to get the chapter name
+\renewcommand{\sectionmark}[1]{\markright{\ #1}}
+\ihead{\textnormal{chapter \thesection}\hspace*{2pt}\textit{\headmark}\hspace*{10pt}\hackedrule[0.25em]{1pt}}
+\chead{}
+\pagestyle{scrheadings}
+\catcode`~=11 % make LaTeX treat tilde (~) like a normal character
+\newcommand{\urltilde}{\kern -.15em\lower .7ex\hbox{~}\kern .04em}
+\catcode`~=13 % revert back
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{6pt}
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\ihead{\hackedrule[0.25em]{1pt}}
