@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.22)  23 APR 2016 19:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.22)  24 APR 2016 15:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1853,19 +1853,29 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.5> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <15.12003> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
-) (./Aufgaben/2.tex)
-(./Aufgaben/3.tex) (./Aufgaben/4.tex)
+) (./Aufgaben/2.tex
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 4.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 4.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 4.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 13.
- [1
+(babel)             in language  on input line 4.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./Aufgaben/3.tex)
+(./Aufgaben/4.tex)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 13.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 13.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 13.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 13.
+ [2]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 13.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 13.
  (./aufgabenzettel1.aux
@@ -1883,21 +1893,24 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 13.
  ) 
 Here is how much of TeX's memory you used:
- 43804 strings out of 493085
- 1010907 string characters out of 6136917
- 1264935 words of memory out of 5000000
+ 43822 strings out of 493085
+ 1011068 string characters out of 6136917
+ 1267935 words of memory out of 5000000
  46565 multiletter control sequences out of 15000+600000
- 28702 words of font info for 68 fonts, out of 8000000 for 9000
+ 31203 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,12n,81p,10433b,746s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,12n,81p,10433b,862s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/urw/palatino/uplr8a.pfb>
-Output written on aufgabenzettel1.pdf (1 page, 46563 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palat
+ino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on aufgabenzettel1.pdf (2 pages, 80808 bytes).
 PDF statistics:
- 39 PDF objects out of 1000 (max. 8388607)
- 32 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
+ 72 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
+ 22 named destinations out of 1000 (max. 500000)
  19469 words of extra memory for PDF output out of 20736 (max. 10000000)
 
