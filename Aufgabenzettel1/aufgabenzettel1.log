@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.22)  24 APR 2016 15:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.22)  24 APR 2016 17:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1893,24 +1893,26 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 13.
  ) 
 Here is how much of TeX's memory you used:
- 43822 strings out of 493085
- 1011068 string characters out of 6136917
+ 43831 strings out of 493085
+ 1011122 string characters out of 6136917
  1267935 words of memory out of 5000000
  46565 multiletter control sequences out of 15000+600000
- 31203 words of font info for 74 fonts, out of 8000000 for 9000
+ 34333 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,12n,81p,10433b,862s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palat
-ino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on aufgabenzettel1.pdf (2 pages, 80808 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helve
+tic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on aufgabenzettel1.pdf (2 pages, 98768 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 80 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
  22 named destinations out of 1000 (max. 500000)
  19469 words of extra memory for PDF output out of 20736 (max. 10000000)
 
