@@ -1,0 +1,36 @@
+\section*{\nr.4 \titfour (10 Punkte)}
+\begin{enumerate}[(a)]
+\item Berechnen wir zunächst das elektrische Feld außerhalb der homogenen Vollkugel. Dazu legen wir eine Sphäre mit Radius $r>R$ um die Kugel und wenden das Gaußsche Gesetz an. Aus Symmetriegründen muss sich das elektrische Feld in der Form $\vec{E}=E(r)\hat{e}_r$ schreiben lassen, während für das Flächenelement der Sphäre $\mathrm{d}\vec{A}=\hat{e}_r \mathrm{d}A$ gelten muss:
+\begin{equation}
+\Phi = \oint_{\text{Sphäre}}\vec{E}\cdot\mathrm{d}\vec{A}= \oint_{\text{Sphäre}}E\, \mathrm{d}A = E\cdot 4\pi r^2
+\end{equation}
+Da $\Phi= Q_\text{innen}/\epsilon_0$ ist, folgt:
+\begin{equation}
+\vec{E}=\frac{Q}{4\pi\epsilon_0r^2}\hat{e}_r
+\end{equation}
+
+Nun zur Berechnung des elektrischen Feldes innerhalb der Vollkugel. Wieder legen wir eine Sphäre in das Koordinatensystem der Kugel, diesmal mit Radius $r<R$. Für den elektrischen Fluss gilt immer noch:
+\begin{equation}
+\Phi = \oint_{\text{Sphäre}}\vec{E}\cdot\mathrm{d}\vec{A}= \oint_{\text{Sphäre}}E\, \mathrm{d}A = E\cdot 4\pi r^2
+\end{equation}
+Allerdings ist  $Q_\text{innen}$ nun eine Funktion des Radius $r$ der Sphäre:
+\begin{equation}
+Q_\text{innen} = \frac{4\pi r^3 /3}{4\pi R^3/3} Q= \frac{r^3}{R^3}Q
+\end{equation} 
+
+Für das elektrische Feld ergibt sich damit:
+\begin{equation}
+\vec{E}=\frac{Q}{4\pi\epsilon_0}\frac{r}{R^3}\hat{e}_r
+\end{equation}
+
+\item Für die "`Kugelschalen"' verfahren wir völlig analog. Auch gelten für das elektrische Feld und den Flächenvektor auf unserer Hilfssphäre die gleichen Symmetrieüberlegungen wie oben. Wie oben hergeleitet, gilt für den elektrischen Fluss durch eine Sphäre mit Radius $r$ $\Phi= E\cdot 4\pi r^2$. Nach dem Gaußschen Gesetz folgt damit:
+\begin{itemize}
+\item $r<R_1$: $Q_\text{innen}=0 \implies E=0$
+\item $R_1<r<R_2$: $Q_\text{innen}=\sigma_1 4\pi R_1^2 \implies E =\frac{\sigma_1 R_1^2}{\epsilon_0 r^2}$
+\item $r>R_2$: $Q_\text{innen}=\sigma_1 4\pi R_1^2 + \sigma_2 4\pi R_2^2 \implies E =\frac{\sigma_1 R_1^2+\sigma_2 R_2^2}{\epsilon_0 r^2}$
+\end{itemize}
+
+Für $r>R_2$ verschwindet das elektrische Feld identisch, falls $\sigma_1 R_1^2 = - \sigma_2 R_2^2$, also wenn beide Kugelschalen betragsmäßig gleich viel -- jedoch jeweils ungleichnamige -- Ladung tragen.
+
+Für $R_1 < r < R_2$ ist $E=0\iff\sigma_1= 0$, wenn die innere Kugelschale also keine Ladung trägt.
+\end{enumerate}
