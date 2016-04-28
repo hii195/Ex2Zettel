@@ -1,7 +1,54 @@
 \section*{\nr.3 \titthree (10 Punkte)}
 \begin{enumerate}[(a)]
+\item  Gegeben ist das Integral des Vektorfeldes $\vec{F}(\vec{x})$ üder die geschlossene Oberfläche eines Würfels
+\begin{align}
+\oint_A \vec{F}\mathrm{d}\vec{A},
+\end{align}
+wobei $\vec{F}$ komponentenweise gegeben ist durch
+\begin{equation*}
+	\vec{F} = \begin{pmatrix}F_x \\ F_y \\ F_z \end{pmatrix}.
+\end{equation*}
+Im ersten Schritt kann das Integral über die gesamte Würfeloberfläche als Summe der Integrale über die Einzelflächen dargestellt werden und es ergibt sich, dass 
+\begin{align}
+\begin{split}
+\oint_A \vec{F}\mathrm{d}\vec{A}  = &\int_{A_{1}} \vec{F}(a,y,z)\begin{pmatrix}1 \\ 0 \\ 0 \end{pmatrix} \mathrm{d}A - \int_{A_{1}} \vec{F}(0,y,z)\begin{pmatrix}1 \\ 0 \\ 0 \end{pmatrix}\mathrm{d}A + \int_{A_{2}} \vec{F}(x,a,z)\begin{pmatrix}0 \\ 1 \\ 0 \end{pmatrix}\mathrm{d}A \\ 
+& - \int_{A_{2}} \vec{F}(x,0,z)\begin{pmatrix}0 \\ 1 \\ 0 \end{pmatrix}\mathrm{d}A + \int_{A_{3}} \vec{F}(x,y,a)\begin{pmatrix}0 \\ 0 \\ 1 \end{pmatrix}\mathrm{d}A - \int_{A_{3}} \vec{F}(x,y,0)\begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}\mathrm{d}A \\
+  = &\int_{A_{1}} F_{x}(a,y,z) \mathrm{d}A - \int_{A_{1}} F_{x}(0,y,z)\mathrm{d}A + \int_{A_{2}} F_{y}(x,a,z)\mathrm{d}A \\ 
+  & - \int_{A_{2}} F_{y}(x,0,z)\mathrm{d}A + \int_{A_{3}} F_{z}(x,y,a)\mathrm{d}A - \int_{A_{3}} F_{z}(x,y,0)\mathrm{d}A.
+\end{split}
+\end{align}
+Die Fläche $A_{1}$ liegt in der y-z-Ebene, deswegen kann man das Integral $\mathrm{d}A$ über $A_{1}$ ersetzten durch da $\mathrm{d}y \mathrm{d}z$ in den Grenzen [0,a] und [0,a] ersetzt werden. Damit ergibt sich
+\begin{align*}
+	\oint_A \vec{F}\mathrm{d}\vec{A}  &= \int_0^a\int_0^a F_{x}(a,y,z) - F_{x}(0,y,z) \mathrm{d}y \mathrm{d}z + \int_0^a\int_0^a F_{y}(x,a,z) \\ &- F_{x}(x,0,z) \mathrm{d}x \mathrm{d}z + \int_0^a\int_0^a F_{z}(x,y,a) - F_{x}(x,y,0) \mathrm{d}x \mathrm{d}y
+\end{align*} 
+\item Mit der angegebenen Identität vereinfacht sich der obige Ausdruck zu
+\begin{align*}
+&\int_0^a \int_0^a \int_0^a \frac{\partial F_{x}}{\partial x} \mathrm{d}x\mathrm{d}y\mathrm{d}z + \int_0^a \int_0^a \int_0^a \frac{\partial F_{y}}{\partial y} \mathrm{d}y\mathrm{d}x\mathrm{d}z + 
+\int_0^a \int_0^a \int_0^a \frac{\partial F_{z}}{\partial z} \mathrm{d}z\mathrm{d}x\mathrm{d}y
+\\ &= \int_0^a \int_0^a \int_0^a  \frac{\partial F_{x}}{\partial y} +  \frac{\partial F_{y}}{\partial y} + \frac{\partial F_{z}}{\partial z} \mathrm{d}x\mathrm{d}y\mathrm{d}z
+\\ &= \int_V \vec{\nabla}  \vec{F} \mathrm{d}V.
+\end{align*}
+\hfill $\square$ 
 \item
-
+Im Folgenden werden die Felder $\vec{F_{1}}, \vec{F_{2}}, \vec{F_{3}}$ für die Interpretation als elektrische Felder behandelt. (Außerdem wird implizit die erste Maxwellgleichung div $\vec{E} =  \frac{\rho}{\epsilon_{0}}$ verwendet.)
+\begin{enumerate}[(i)]
+\item 
+\begin{equation}
+\vec{\nabla}  \vec{F_{1}} = \vec{\nabla}  \begin{pmatrix} 0 \\ 0 \\ a \end{pmatrix} = 0.
+\end{equation}
+In einem Homogenen Feld befinden sich keine Ladungen.
+\item
+\begin{equation}
+\vec{\nabla}  \vec{F_{2}} = \vec{\nabla}  \begin{pmatrix} x \\ y \\ z \end{pmatrix} = 3.
+\end{equation}
+In einem Zentrum eines Radialfeldes befindet sich Ladung.
+\item
+\begin{equation}
+\vec{\nabla}  \vec{F_{2}} = \vec{\nabla}  \begin{pmatrix} -y \\ x \\ 0 \end{pmatrix} = 0.
+\end{equation}
+Ein Wirbelfeld wird nicht von einer Ladungsverteilung 
+\end{enumerate}
+\item 
 \begin{align}
 \begin{split}
 \oint_A \vec{F}\mathrm{d}\vec{A} = &\int_{A_{1}} F_{x}(a,y,z)\mathrm{d}A - \int_{A_{1}} F_{x}(0,y,z)\mathrm{d}A + \int_{A_{2}} F_{y}(x,a,z)\mathrm{d}A \\ 
