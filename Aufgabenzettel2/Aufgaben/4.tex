@@ -1,0 +1,56 @@
+\section*{\nr.4 \titfour (10 Punkte)}
+\begin{enumerate}[(a)]
+\item Aus Symmetriegründen gilt für das elektrische Feld hier $\vec{E}=E(r)\hat{e}_r$. Für $r<r_k$ befinden wir uns im Inneren eines Leiters, weshalb das elektrische Feld verschwindet. Die positive Ladung sitzt auf der Außenhaut der inneren Kugel. 
+
+Für $r_k < r < r_i$ beträgt die eingeschlossene Ladung $q$, während für den elektrischen Fluss $\Phi=E\cdot 4\pi r^2$ gilt. Nach dem Gaußschen Gesetz folgt dann für das elektrische Feld:
+\begin{equation}
+E = \frac{1}{4\pi \epsilon_0} \frac{q}{r^2}
+\label{eq:Feld}
+\end{equation}
+
+Durch die Anwesenheit der positiven Ladung auf der Kugel findet auf der Kugelschale durch Influenz eine Ladungstrennung statt. Während auf der Innenhaut sich negative Ladungsträger sammeln, erhält die Außenhaut der Schale eine positive Partialladung. Für $r_i < r < r_a$ beträgt die eingeschlossene Ladung folglich Null und das elektrische Feld im Inneren der Schale verschwindet, wie man es von einem Leiter erwarten würde. 
+
+Für $r> r_a$ beträgt die innere Ladung $q$ und man erhält für das E-Feld den Zusammenhang von \vref{eq:Feld}. Der Verlauf des E-Felds in Abhängigkeit vom Radius ist in \vref{fig:feldkond} graphisch aufbereitet.
+
+
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+%Koordinatensystem mit Beschriftungen und Skalierung
+\draw[<->] (0,5)node[left]{$E$} -- (0,0) -- (9,0)node[right]{$r$};
+\draw (2,-0.1)node[below]{$r_k$} -- (2,0.1);
+\draw (5,-0.1)node[below]{$r_i$} -- (5,0.1);
+\draw (6,-0.1)node[below]{$r_a$} -- (6,0.1);
+
+%Gestrichelte Linien
+\draw[dashed] (2,0) -- (2,4.5);
+\draw[dashed] (5,0) -- (5,4.5);
+\draw[dashed] (6,0) -- (6,4.5);
+
+%Funktionen
+\draw[color=red,thick] (0,0) -- (2,0);
+\draw[color=red,thick,domain=2:5] plot (\x,{15/\x/\x});
+\draw[color=red,thick] (5,0) -- (6,0);
+\draw[color=red,thick,domain=6:7.5] plot (\x,{15/\x/\x});
+
+\end{tikzpicture}
+\caption{Elektrisches Feld im Kugelkondensator in Abhängigkeit vom Radius bei \emph{nicht} geerdeter Kugelschale}
+\label{fig:feldkond}
+\end{figure}
+
+\item Wird nun die Kugelschale geerdet, so fließt die positive Ladung auf der Außenhaut der Schale ab, sodass nur die negative Ladung auf der Innenhaut übrig bleibt. Die Kugelschale trägt somit die Ladung $-q$. An ihrer Oberfläche beträgt die innere Ladung nun Null, da die negativen Ladungsträger auf der Innenhaut der Kugelschale sitzen. Die Anordnung ist also nach außen hin elektrisch neutral, somit verschwindet das elektrische Feld.
+
+\item Für die Spannung zwischen Kugel und Kugelschale gilt:
+\begin{align}
+U &= \phi(r_k) - \phi(r_i) = -\int_{r_i}^{r_k}{E\,\mathrm{d}r} = \left. \frac{1}{4\pi\epsilon_0} \frac{q}{r}\right|_{r_i}^{r_k}\\
+ &= \frac{q}{4\pi\epsilon_0} \left(\frac{1}{r_k} - \frac{1}{r_i} \right) = \frac{q(r_i-r_k)}{4\pi\epsilon_0r_i r_k}
+\end{align}
+
+Mit $C=q/U$ folgt somit für die Kapazität des Kugelkondensators:
+\begin{equation}
+C=4 \pi \epsilon_0 \frac{r_i r_k}{r_i - r_k}
+\end{equation}
+
+
+\end{enumerate}
