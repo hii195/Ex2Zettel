@@ -1,0 +1,75 @@
+\section*{\nr.3 \titthree (10 Punkte)}
+\begin{enumerate}[(a)]
+\item Für den Bereich im Vakuum gilt für das elektrische Feld
+\begin{align}
+E_\text{vak} &= \frac{U_0}{d} = \SI{10}{\kilo\volt\per\meter}\\
+\intertext{während für das Dielektrikum}
+E_\text{diel} &= \frac{U_0}{\epsilon_r d} = \SI{5}{\kilo\volt\per\meter}
+\end{align}
+gilt. Dadurch ergibt sich ein elektrisches Feld wie in \vref{fig:feldkond}.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+%Koordinatensystem mit Beschriftungen und Skalierung
+\draw[<->] (0,5)node[left]{$E$} -- (0,0) -- (7.5,0)node[right]{$r$};
+\draw (2,-0.1)node[below]{$a$} -- (2,0.1);
+\draw (4,-0.1)node[below]{$2a$} -- (4,0.1);
+\draw (6,-0.1)node[below]{$3a$} -- (6,0.1);
+
+%Gestrichelte Linien
+\draw[dashed] (2,0) -- (2,4.5);
+\draw[dashed] (4,0) -- (4,4.5);
+
+%Funktionen
+\draw[color=red,thick] (0,4) -- (2,4);
+\draw[color=red,thick] (2,2) -- (4,2);
+\draw[color=red,thick] (4,4) -- (6,4);
+
+\end{tikzpicture}
+\caption{Elektrisches Feld im Kondensator in Abhängigkeit von der Position $x$.}
+\label{fig:feldkond}
+\end{figure}
+
+Für die dielektrische Verschiebung ergibt sich sowohl im Dielektrikum als auch im Vakuum ein Wert von $D=\epsilon_0 U_0/d\approx \SI{8.85e-8}{\coulomb\per\meter\squared}$, ist also konstant, wodurch sich eine graphische Veranschaulichung erübrigen dürfte.
+\item 
+Durch Polarisation ist das Innere der Glasscheibe elektrisch neutral, während die Außenflächen, die parallel zu den Kondensatorplatten liegen, eine Teilladung besitzen. Die Fläche, die nahe der positiv geladenen Platte ist, trägt eine negative Ladung, die andere Seite entsprechend eine gleich große -- positive -- Ladung. Auf diese Ladungsträger wirkt nun zwar eine Kraft, im homogenen Feld des Kondensators heben sich jedoch die Kräfte auf die positive und die negative Fläche der Glasscheibe auf, wodurch die Resultierende null wird.
+
+\item Die Kapazität $C$ erhält man, indem man den vorliegenden Kondensator als Serie von drei Kondensatoren mit einem Plattenabstand $a$ betrachtet, wobei der mittlere vollständig durch ein Dielektrikum gefüllt ist:
+\begin{align}
+\frac{1}{C} &= \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3} \\
+			&= \frac{a}{\epsilon_0 A} + \frac{a}{\epsilon_r \epsilon_0 A} + \frac{a}{\epsilon_0 A}\\
+			&= \frac{a(2\epsilon_r+1)}{A\epsilon_0 \epsilon_r} \\
+			&\implies C = \frac{A\epsilon_0 \epsilon_r}{a(2\epsilon_r+1)} \approx \SI{35}{\pico\farad}
+\end{align}
+\item Wird die Glasscheibe durch eine Metallplatte ausgetauscht, so ändert sich das elektrische Feld im Vakuumbereich nicht ($E=U_0/d$), im Leiter ist es im Zuge von Influenz null. Analog gilt für die dielektrische Verschiebung im Vakuumbereich $D=\epsilon_0U_0/d$, im Leiter ist sie ebenfalls null, anders als im Dielektrikum. Eine Veranschaulichung ist durch \vref{fig:feldmetall} gegeben.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+%Koordinatensystem mit Beschriftungen und Skalierung
+\draw[<->] (0,5)node[left]{$E$ \text{bzw.} $D$} -- (0,0) -- (7.5,0)node[right]{$r$};
+\draw (2,-0.1)node[below]{$a$} -- (2,0.1);
+\draw (4,-0.1)node[below]{$2a$} -- (4,0.1);
+\draw (6,-0.1)node[below]{$3a$} -- (6,0.1);
+
+%Gestrichelte Linien
+\draw[dashed] (2,0) -- (2,4.5);
+\draw[dashed] (4,0) -- (4,4.5);
+
+%Funktionen
+\draw[color=red,thick] (0,4) -- (2,4);
+\draw[color=red,thick] (2,0) -- (4,0);
+\draw[color=red,thick] (4,4) -- (6,4);
+
+\end{tikzpicture}
+\caption{Elektrisches Feld und dielektrische Verschiebung im Kondensator in Abhängigkeit von der Position $x$.}
+\label{fig:feldmetall}
+\end{figure}
+
+\item Zur Berechnung der Kapazität verfähren wir ähnlich wie in (c) und betrachten den vorliegende Anordnung als Serie von zwei Vakuumkondensatoren mit Plattenabstand $a$:
+\begin{equation}
+C= \frac{C_1 C_2}{C_1 +C_2} = \frac{(\epsilon_0 A /a)(\epsilon_0 A /a)}{(\epsilon_0 A /a)+(\epsilon_0 A /a)} = \frac{\epsilon_0 A}{2a} \approx \SI{44}{\pico\farad}
+\end{equation}
+
+\end{enumerate}
