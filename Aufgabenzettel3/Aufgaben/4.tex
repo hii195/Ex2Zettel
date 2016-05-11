@@ -1,4 +1,34 @@
 \section*{\nr.4 \titfour (10 Punkte)}
 \begin{enumerate}[(a)]
 \item
+Nach der Vorlesung wissen wir, dass das E-Feld im Zylinder gegeben ist durch
+\begin{equation}
+    E_{Zyl} = \frac{Q}{2 \pi r l \epsilon_{0} \epsilon_{r}}
+\end{equation}
+gegeben ist. Daraus folgt für die Kapazität des Kondensators mit homogenem Dielektrikum sofort
+\begin{equation}
+    C_{h}  = \frac{Q}{U} 
+    = \frac{Q}{\int \vec{E} \mathrm{d} \vec{r}} 
+    = \frac{Q}{\int \frac{Q}{2 \pi r l \epsilon_{0} \epsilon_{r}} \mathrm{d} r}
+    = \frac{2 \pi \epsilon_{0} \epsilon_{r} l}{\ln \frac{r_{2}}{r_{1}}}.
+\end{equation}
+Den Kondensator mit eingeschobenem Dielektrikum, kann man als zwei parallelgeschaltete Kondensatoren betrachten. Daraus folgt, dass die Gesamtkapazität gerade die Summe der Einzelkapazitäten ist, also
+\begin{equation}
+    C(a) = \frac{2\pi \epsilon_{0} (l-a)}{\ln \frac{r_{2}}{r_{1}}} + \frac{2 \pi 
+    \epsilon_{0} \epsilon_{r} a}{\ln \frac{r_{2}}{r_{1}}} 
+    = \frac{2 \pi \epsilon_{0}}{\ln \frac{r_{2}}{r_{1}}} [ l + a(\epsilon_{r} - 1) ]
+\end{equation}
+\item
+Da der Kondensator nach dem Aufladen auf die Spannung $U_{0}$ von der externen Spannungsquelle getrennt wird, gilt $Q = C(a) \cdot U(a) = C(0) \cdot U_{0} = const.$. Durch einfaches Umformen ergibt sich daraus
+\begin{equation}
+    U(a) = \frac{C(0) U_{0}}{C(a)} = \frac{l U_{0}}{l + a(\epsilon_{r} - 1)}.
+\end{equation}
+\item
+Allgemein gilt für Potentialkräfte, dass $\vec{F} = -\vec{\nabla} E$. Im eindimensionalen Fall ist dies äquivalten zu $F = -\frac{\partial E}{\partial a}$. Dadurch ergibt sich
+\begin{equation}
+    -\frac{\partial E}{\partial a} = -\frac{\partial}{\partial a} \frac{1}{2}C(a) U^{2}(a)
+    = \frac{\pi \epsilon_{0}}{\ln \frac{r_{2}}{r_{1}}} \cdot \frac{l^2 U_{0}^2}{\big[ l+a(\epsilon_{r}-1)\big]^2}.
+    \label{eq:Force}
+\end{equation}
+Die Kraft muss aus symmetriegründen parallel zu a gerichtet sein. Da sie wie in \eqref{eq:Force} gezeigt ein positives Vorzeiche trägt muss sie in die gleiche Richtung wie a, also in den Kondenator gerichtet sein. Das Dielektrikum wird also in den Kondensator hineingezogen. Die Kraft fällt ungefähr prroportional zu $\frac{1}{a^2}$ ab.
 \end{enumerate}
