@@ -1,4 +1,32 @@
 \section*{\nr.2 \tittwo (10 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item Für einen kleinen Abstand $\mathrm{d}r$ gilt
+\begin{equation}
+  \mathrm{d}R=\rho \frac{\mathrm{d}r}{A(r)}=\frac{\rho}{2\pi r^2}\mathrm{d}r
+\end{equation}
+Für die Potentialdifferenz gilt also
+\begin{align}
+  \Delta\phi&=\left|I\int_{r_1}^{r_2}\frac{\rho}{2\pi r^2}\mathrm{d}r\right|\\
+  &=\left|I \frac{\rho}{2\pi}\left(\frac{1}{r_2}-\frac{1}{r_1}\right)\right|
+\end{align}
+Was für den Mann $\Delta \phi_M=79.2V$ und für die Kuh $\Delta \phi_K=235V$ ergibt.
+\item Es gilt
+\begin{equation}
+  I=\frac{U}{R}
+\end{equation}
+womit sich für den Mann ein Strom von $I_M=0.02A$ und für die Kuh ein Strom von $I_K=0.059A$ ergibt.
+\item Damit der Körperstrom tödlich wäre müsste bei dem kritischen Abstand $r_0$ gelten, dass
+\begin{equation}
+  \frac{\Delta \phi_M}{R}=I_{krit.}=0.05A.
+\end{equation}
+Nach einigem Umformen erhält man die quadratische Gleichung 
+\begin{equation}
+  r_0^2+r_0\Delta r- \frac{I}{I_{crit.}}\frac{\rho}{R2\pi}=0
+\end{equation}
+mit der Lösung (die negative Lösung ergibt physikalisch keinen Sinn)
+\begin{equation}
+  r_0=-\frac{\Delta r}{2}+\sqrt{\frac{\Delta r^2}{4}+\frac{I}{I_{crit.}}\frac{\rho}{2\pi R}\Delta r}=62.8m.
+\end{equation}
+Dabei sind $R$ der Körperwiderstand und $\Delta r$ die Schrittweite.
+
 \end{enumerate}
