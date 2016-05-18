@@ -1,4 +1,72 @@
 \section*{\nr.3 \titthree (10 Punkte)}
 \begin{enumerate}[(a)]
 \item
+Aus der Beziehung $U_0 - R_i I = U_1$ folgt:
+\begin{equation}
+R_i = \frac{U_0-U_1}{I} \approx \SI{17}{\milli\ohm}
+\end{equation}
+Aus $U_1=R_a I$ folgt:
+\begin{equation}
+R_a = \frac{U_1}{I} \approx \SI{67}{\milli\ohm}
+\end{equation}
+
+Ein Schaltplan der Abbildung findet sich in \vref{fig:circuit}.
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[circuit ee IEC]
+%Knoten
+\node [contact] (oben) at (5,2) {};
+\node [contact] (unten) at (5,-1) {};
+
+\draw (0,-1) to [battery={info={$U_0$}}] (0,2) to [resistor={info={$R_i$}}] (oben) to [resistor={info={$R_a$}}] (unten) to (0,-1);
+
+\draw (unten) to (7,-1) to [voltage source={adjustable',info'={$U_1$}}] (7,2) to (oben);
+
+\end{tikzpicture}
+\caption{Schaltplan einer Anordnung von einer Batterie mit Innenwiderstand $R_i$ und zugeschaltetem Anlasser. Ein (ideales) Spannungsmessgerät misst die Spannung $U_1$.}
+\label{fig:circuit}
+\end{figure}
+
+\item Aus $U_0-R_i I = U_1$ folgt mit $R_i=R_a$, dass $U_0-R_a I = U_1$. Andererseits ist $U_1 = R_a I$. Dadurch ergibt sich:
+\begin{equation}
+U_0 - U_1 = U_1 \iff U_1 = U_0 /2 \approx \SI{6.25}{\volt}
+\end{equation}
+
+\item
+
+Betrachten wir zunächst (a): Für die in der Batterie verbrauchte Leistung gilt
+\begin{equation}
+P_i = (U_0-U_1)I = \SI{375}{\watt},
+\end{equation}
+während im Anlasser
+\begin{equation}
+P_a = U_1 I = \SI{1.5}{\kilo\watt}
+\end{equation}
+verbraucht werden.
+
+Nun zu (b): Für die verbrauchte Leistung in der Batterie gilt
+\begin{equation}
+P_i = (U_0 - U_1) I = \frac{(U_0-U_1)^2}{R_i} = \frac{(U_0/2)^2}{R_a} = \frac{U_0^2}{4R_a} \approx \SI{586}{\watt},
+\end{equation}
+und für den Anlasser
+\begin{equation}
+P_a = U_1 I = U_1^2/R_a = \frac{(U_0/2)^2}{R_a} = \frac{U_0^2}{4R_a} \approx \SI{586}{\watt}.
+\end{equation}
+
+Um die Leistung $P_a$ als Funktion von $R_a$ bei festem $R_i$ zu ermitteln, ist das Gleichungssystem
+\begin{align}
+U_0 - U_1 &= R_i I \\
+U_1 &= R_a I
+\end{align} 
+mit den Unbekannten $U_1$ und $I$ zu lösen. Elementare Umformungen führen zu $I = U_0/(R_a + R_i)$ und $U_1 = R_a U_0 /(R_a + R_i)$.
+
+Für die im Anlasser verbrauchte Leistung gilt dann:
+\begin{equation}
+P_a = U_1 I = U_0^2 \frac{R_a}{(R_a+R_i)^2}
+\end{equation}
+Zur Ermittlung des Maximums muss die Bedingung $\partial P_a / \partial R_a = 0$ ausgewertet werden, was auf 
+\begin{equation}
+\frac{U_0^2(R_a+R_i)-2U_0^2R_a}{(R_a+R_i)^3}=\frac{\partial P_a}{\partial R_a} = 0 \iff R_a = R_i
+\end{equation}
+führt. Die verbrauchte Leistung im Anlasser wird also maximal, wenn der Widerstand des Anlassers dem Innenwiderstand der Batterie entspricht.
 \end{enumerate}

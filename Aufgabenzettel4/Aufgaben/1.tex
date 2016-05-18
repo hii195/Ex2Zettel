@@ -1,5 +1,36 @@
 \section*{\nr.1 \titone (10 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item Für die Masse des Drahtstückes gilt
+\begin{equation}
+m = \rho V = \rho \pi \left(\frac{D}{2} \right)^2 L = \frac{1}{4}\pi \rho L D^2.
+\end{equation}
+Die Anzahl $N$ der Leitungselektronen ergibt sich aus der Anzahl der Goldatome, wobei wir die Definition der Avogadro-Konstanten $N_A$ und der Stoffmenge $\nu=m/M$ verwenden:
+\begin{equation}
+N =\nu N_A  = N_A \frac{m}{M} = \frac{N_A}{4M} \pi \rho L D^2,
+\end{equation}
+wobei $M$ die molare Masse von Gold ist. Einsetzen der Zahlenwerte ergibt $N \approx \num{4.63e20}$.
+
+\item Aus $I=\Delta Q / \Delta t$ folgt
+\begin{equation}
+\Delta Q = I \Delta t = \SI{3}{\coulomb}.
+\end{equation}
+Mithilfe der Elementarladung ergibt sich für die Anzahl $\tilde{N}$ der passierenden Elektronen:
+\begin{equation}
+N = \frac{\Delta Q}{q_e}  \approx  \num{1.87e19}
+\end{equation}
+
+\item Berechnen wir zunächst die mittlere Teilchendichte $n$ im Draht:
+\begin{equation}
+n = \frac{N}{V} = \frac{\frac{N_A}{4M} \pi \rho L D^2}{\frac{1}{4}\pi L D^2} = \frac{N_A}{M} \rho
+\end{equation}
+Mithilfe der Stromdichte $j=I/A=I/(\pi D^2/4)$ und der Beziehung $\vec{j} = nq_e \vec{v_D}$ folgt für den Betrag der Driftgeschwindigkeit:
+\begin{equation}
+v_D = \frac{I}{Anq_e} = \frac{I}{\frac{1}{4}\pi D^2 \frac{N_A}{M} \rho q_e} = \frac{4MI}{\pi D^2 N_A \rho q_e} \approx \SI{4e-4}{\meter\per\second}
+\end{equation}
+
+\item Für die mittlere Zeitdauer gilt
+\begin{equation}
+\Delta t = \frac{\Delta s}{v_D} \approx \frac{2.5e3}{s}.
+\end{equation}
 
 \end{enumerate}
