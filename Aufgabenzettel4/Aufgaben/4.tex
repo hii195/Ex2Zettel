@@ -1,4 +1,103 @@
 \section*{\nr.4 \titfour (10 Punkte)}
 \begin{enumerate}[(a)]
+\item Durch die Kirchhoffsche Knotenregel $\sum_{k} I_{k} = 0$ ergeben sich die Gleichungen
+\begin{align}
+	I_{0} = I_1 + I_2 = I_3 + I_4 \label{K1} \\
+	I_1 = I_2 bzw. I_3 = I_4 \label{K2}.
+\end{align}
+Desweiteren folgt aus der Maschenregel $\sum_{k} U_k = 0$ 
+\begin{align}
+	U_{AC} = U_{AB} + U_{BC} = U_{AD} + U_{DC} \label{M1} \\
+	U_{BD} = U_{BC} + U_{CD} = U_{BA} + U_{AD} \label{M2}.
+\end{align}
+\item Im weiteren werden folgende Definitionen verwendet:
+\begin{align}
+	U_{AB} &= -U_{BA} =: U_1 \\
+	U_{BC} &= -U_{CB} =: U_2 \\
+	U_{AD} &= -U_{DA} =: U_3 \\
+	U_{DC} &= -U_{CD} =: U_4 \\
+	U_{AC} &=: U_0 = 1V	 \\
+	R_x &=: R_4.
+\end{align}
+Damit lässt sich das Ohmsche Gesetz einfach als $U_i = R_i I_i$ schreiben, welches ab sofort als trivial angesehen wird. \\
+Durch den Abgleich durch $R_3$ gilt $U_{DB} = 0$. Damit folgt aus \ref{M2}
+\begin{equation}
+	U_2 = U_{BC} = -U_{CD} = U_4 \Leftrightarrow R_2 I_2 = R_4 I_4 \Leftrightarrow R_4 = \frac{R_2 I_2}{I_4}. \label{eq:R4}
+\end{equation}
+Aus \ref{M1} folgt
+\begin{equation}
+	U_1 + U_2 = U_3 +  U_4 \Leftrightarrow R_1 I_1 + R_2 I_2 = R_3 I_3 + R_4 I_4.
+\end{equation}
+Durch \ref{K2} wird daraus
+\begin{equation}
+	(R_1 + R_2)I_2 = (R_3 + R_4)I_4 \Leftrightarrow \frac{I_2}{I_4} = \frac{R_3 + R_4}{R_1 + R_2} \label{eq:I4}
+\end{equation}
+In \ref{eq:R4} eingesetzt ergibt sich
+\begin{equation}
+	R_4 = R_2 \frac{R_3 + R_4}{R_1 + R_2} \Leftrightarrow R_4 = \frac{R_2 R_3}{R_1} \approx \SI{109.73}{\ohm}
+\end{equation}
 \item
+Für die Temperatur ergibt sich damit sofort
+\begin{equation}
+	R_{x}(\vartheta) = \SI{100}{\ohm} + \SI[per-mode=fraction]{0.39}{\ohm\per\degreeCelsius} \vartheta \overset{!}{=} \SI{109,73}{\ohm} \Leftrightarrow \vartheta \approx \SI{24.95}{\degreeCelsius}
+\end{equation}
+\item
+Die freiwerdende Heizleistung im Temperatursensor ist gegeben durch
+\begin{equation}
+	P = U_4 I_4 = R_4 I_{4}^{2}.
+\end{equation}
+Unter verwendung von \ref{eq:I4} erhält man
+\begin{equation}
+	I_2  = \frac{R_3 + R_4}{R_1 + R_2} I_4
+\end{equation}
+und gemeinsam mit \ref{K1} folgt
+\begin{equation}
+	I_4  \left( 1 +\frac{R_3 + R_4}{R_1 + R_2} \right) = I_0 \Leftrightarrow I_4 = \frac{R_1 + R_2}{R_1 + R_2 + R_3 + R_4}I_0 \label{eq:I}
+\end{equation}
+wobei gilt
+\begin{equation}
+	I_0 = \frac{U_0}{R_0} 
+\end{equation}
+\begin{equation}
+	R_0 = \left(\frac{1}{R_1} + \frac{1}{R_3} \right)^{-1} + \left(\frac{1}{R_2} + \frac{1}{R_4} \right)^{-1} \approx \SI{354.28}{\ohm}
+\end{equation}
+Damit ergibt sich für die Leistung
+\begin{equation}
+	P = R_4 I_4^2 \approx \SI{3.645e-4}{\watt}
+\end{equation}
+\item
+Nach \ref{M2} gilt
+\begin{equation}
+	U_{DB} = U_{DA} - U_{AB} = U_1 - U_3 = R_1 I_1 - R_3 I_3 \label{eq:UDB}
+\end{equation}
+Aus \ref{eq:I} und \ref{K2} folgt direkt
+\begin{equation}
+	I_4 = \frac{R_1 + R_2}{R_1 + R_2 + R_3 + R_4}I_0 = I_3
+\end{equation}
+Wegen \ref{K1} folgt außerdem
+\begin{equation}
+	I_1 = I_0 - I_3 = \frac{R_3 + R_4}{R_1 + R_2 + R_3 + R_4}I_0
+\end{equation}
+Bei einer Temperatur von $\vartheta = \SI{50}{\degreeCelsius}$ ergibt sich
+\begin{equation}
+	R_4 = R_x(\SI{50}{\degreeCelsius)} = \SI{119.5}{\ohm}
+\end{equation}
+Damit berechnet man
+\begin{equation}
+	R_0 = \left(\frac{1}{R_1} + \frac{1}{R_3} \right)^{-1} + \left(\frac{1}{R_2} + \frac{1}{R_4} \right)^{-1} \approx \SI{358.22}{\ohm}
+\end{equation}
+Es ist wieder $I_0 = \frac{U_0}{R_0}$, nun kann man mit \ref{eq:UDB} $U_{DB}$ berechnen und es ergibt sich
+\begin{equation}
+	U_{DB} \approx \SI{0.014}{\volt}.
+\end{equation}
 \end{enumerate}
+
+
+
+
+
+
+
+
+
+
