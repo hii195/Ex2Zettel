@@ -1,0 +1,1 @@
+unset surface; set cntrparam levels 9; set contour; set table "aufgabenzettel5_contourtmp0.table"; splot "aufgabenzettel5_contourtmp0.dat";
