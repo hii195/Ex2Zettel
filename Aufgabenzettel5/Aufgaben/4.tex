@@ -1,4 +1,29 @@
 \section*{\nr.4 \titfour (10 Punkte)}
 \begin{enumerate}[(a)]
 \item
+Das Elektron bewegt sich in einem Coulombpotenzial, dass vom Kern ausgeht. Es muss gelten
+\begin{equation}
+	F_c = F_{zp} = \frac{q^2}{4 \pi \epsilon_0 r^2} = \frac{m_e v^2}{r} \Leftrightarrow v =
+	\frac{e}{\sqrt{4 \pi \epsilon_0 r m_e}} = \frac{e^2}{4\pi\epsilon_0\hbar} \approx \SI[per-mode=fraction] {2,19e6}{\meter \per\second}
+\end{equation} 
+Für das Magnetische moment gibt sich mit der Beziehung $ I = \frac{e}{T} = \frac{e \omega}{2 \pi} = \frac{e v}{2 \pi r}$
+\begin{equation}
+	\mu = IA = \pi r^2 \frac{e v}{2 \pi r} = \frac{e \hbar}{2 m_e} \approx \SI {9.2e-24}{\ampere\square\meter}
+\end{equation}
+\item
+Die Zeit die das Atom zum durchlaufen des Magnetfelds benötigt beträgt $t = \frac{s}{v} = \frac{\SI{1e-2}{\meter}}{\SI{1000}{\meter\per\second}} = \SI{1e-5}{\second}$, da die Gesschwindigkeit in z-Richtung konstant ist, da die Lorenzkraft immer senkrecht auf der Bewegungsrichtung steht. Die Beschleunigung ist gegeben durch 
+\begin{equation}
+a = \frac{F}{m} = \frac{\mu \frac{dB}{dy}}{m} \approx \SI[per-mode=fraction] {5,55e6}{\meter\per\square\second}
+\end{equation}
+mit $m = \SI {1,66e-27}{\kilogram}$ die Atommassevon Wasserstoff. Da die Beschleunigung im Magnetfeld konstant ist, lässt sich der auf dieser Strecke in y-Richtung zurückgelegte weg berechnen durch 
+\begin{equation}
+	s_1 = \frac{1}{2}at^2 \approx \SI {2,7e-4}{m}. 
+\end{equation}Die 10cm hinter dem Magnet durchläuft das Atom in der Zeit $t' = \frac{\SI{1e-1}{\meter}}{\SI{1000}{\meter\per\second}} = \SI{1e-4}{\second}$. Die Geschwindigkeit ist hier konstant $v = at$, da keine Kraft wirkt. Damit legt das Atom nach dem Magnetfeld die Strecke
+\begin{equation}
+	s_2 = (at)\cdot t' \approx \SI{5.55e-3}{\meter}
+\end{equation}
+Die gesamte Ablenkung in y-Richtung beträgt also
+\begin{equation}
+	\Delta y = s_1 + s_2 \approx \SI {5.83e-3}{\meter}.
+\end{equation}
 \end{enumerate}
