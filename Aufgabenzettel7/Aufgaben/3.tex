@@ -1,4 +1,28 @@
 \section*{\nr.3 \titthree (10 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item Aufgrund der Lorentzkraft fließt der Strom in die Richtung $\vec{e}_x \times \vec{e}_z =-\vec{e}_y$, in der Skizze also im Uhrzeigersinn.
+\item In der Leiterschleife zeigt das induzierte Magnetfeld in die Zeichenebene hinein, ist also dem von außen angelegten Magnetfeld entgegengesetzt, wie man es von der Lenzschen Regel erwartet.
+\item Ist die gesamte Leiterschleife in das homogene (!) Magnetfeld eingedrungen, spürt die Schleife keinen zeitlich veränderlichen magnetischen Fluss, also wird kein Strom induziert.
+
+\item Die vom Magnetfeld durchsetzte Fläche der Leiterschleife beträgt $A(x)=lx$. Solange $x<l$, gilt für den magnetischen Fluss dann:
+\begin{equation}
+\Phi_m = \int_A \vec{B}\mathrm{d}\vec{A'} = \int_A B\,\mathrm{d}A'=\int_0^{x} Bl\, \mathrm{d}x' = B l x
+\end{equation}
+Für dessen zeitliche Änderungsrate folgt $\mathrm{d}\Phi_m /\mathrm{d}t = Blv$, was der negativen induzierten Spannung entspricht. Für den induzierten Strom gilt für $x<l$:
+\begin{equation}
+I (v) = \frac{|U_\text{ind}|}{R} = \frac{Blv}{R}
+\end{equation}
+\item Einerseits wirkt eine Komponente der Lorentzkraft, welche die gesamte Leiterschleife in $y$-Richtung zu schieben sucht. Diese Komponente interessiert uns hier aber nicht, stattdessen nehmen wir an, dass eine Zwangskraft sicherstellt, dass die Leiterschleife nur in $x$-Richtung beweglich ist. Der induzierte Strom erzeugt eine bremsende Lorentzkraft-Komponente mit
+\begin{equation}
+\vec{F} = I (\vec{l} \times \vec{B})=-IlB \hat{e}_x =  -\frac{B^2l^2v}{R} \hat{e}_x.
+\end{equation}
+
+\item Die Bewegung in $x$-Richtung gehorcht der Bewegungsgleichung:
+\begin{equation}
+m \dot{v} = -\frac{B^2l^2}{R}v
+\end{equation}
+Mit der geforderten Anfangsbedingung führt das zur Lösung:
+\begin{equation}
+v(t) = v_0 \exp{\left(-\frac{B^2l^2}{Rm}t \right)}
+\end{equation}
 \end{enumerate}

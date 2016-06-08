@@ -1,5 +1,48 @@
 \section*{\nr.1 \titone (10 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item Wir legen im Folgenden die beschriebene Anordnung in ein zylindrisches Koordinatensystem, wobei die $z$-Achse mit der Symmetrieachse des Zylinders übereinstimmen soll. Da $l>>r$, sind die $\vec{B}$- und $\vec{H}$-Felder parallel zur Mantelfläche des Zylinders und hängen aus Symmetriegründen nur vom Abstand $a$ zur Symmetrieachse ab, also bei geeigneter Stromrichtung $\vec{B}=B(a)\hat{e}_z$ und $\vec{H}=H(a)\hat{e}_z$. Dann gilt aber $B_\perp=H_\perp=0$. 
+
+Wählen wir nun den in \vref{fig:Intweg} dargestellten Integrationsweg $\mathcal{C}$, wobei wir die gepunkteten Abschnitte hinreichend groß wählen, dass das Magnetfeld vernachlässigbar klein wird:
+\begin{equation}
+NI =\oint_\mathcal{C} \vec{H}\mathrm{d}\vec{s} \approx \int_0^{l}{H \mathrm{d}s} = Hl
+\end{equation}
+Also gilt $H=NI/l$, und zwar sowohl im Luftspalt als auch im Eisenkern, da die Parallelkomponente von $\vec{H}$ stetig ist.
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+%Spule mit Beschriftungen
+\draw[thick] (0,0) rectangle (3,5);
+\node[above] at (1.5,0){Spule};
+\node[right] at (3,2.5){$l$};
+\draw[->] (1.5,4) --node[above]{a} (2.5,4);
+%Integrationsweg
+\begin{scope}[red]
+\draw (4.5,5) -- (2.5,5) -- (2.5,0) -- (4.5,0);
+\draw[dotted,thick] (4.5,0) -- (5.5,0);
+\draw (5.5,0) -- (6.5,0) --node[left]{$\mathcal{C}$} (6.5,5) -- (5.5,5);
+\draw[dotted,thick] (4.5,5) -- (5.5,5);
+\end{scope}
+\end{tikzpicture}
+\caption{Integrationsweg für das $\vec{H}$-Feld in der Spule schließt im Unendlichen.}
+\label{fig:Intweg}
+\end{figure}
+
+
+Für das $\vec{B}$-Feld gilt im Luftspalt $B=\mu_0 H = \mu_0 N I/l$ und im Eisenkern $B=\mu\mu_0 H = \mu\mu_0 N I /l$.
+
+\item Für den magnetischen Fluss durch eine Windung mit Querschnitt $A$ gilt:
+\begin{align}
+\Phi_m &= \oint_A \vec{B}\mathrm{d}\vec{A'} = \int_A B \,\mathrm{d}A' = \int_\text{Fe} B \,\mathrm{d}A' + \int_\text{Luft} B \,\mathrm{d}A' \\
+&= \frac{\mu\mu_0 N I }{l} \pi r_K^2 + \frac{\mu_0 N I}{l} (\pi r^2-\pi r_K^2)\\
+&= \frac{\mu_0 N \pi}{l}\left[ (\mu-1) r_K^2 +r^2 \right] I
+\end{align}
+Nach dem Induktionsgesetz gilt dann:
+\begin{equation}
+U_\text{ind} = -N \frac{\mathrm{d}\Phi_m}{\mathrm{d}t} =- \frac{\mu_0 N^2 \pi}{l}\left[ (\mu-1) r_K^2 +r^2 \right] \frac{\mathrm{d}I}{\mathrm{d}t}
+\end{equation}
+Ein Vergleich mit $U_\text{ind}=-L \,\mathrm{d}I/\mathrm{d}t$ liefert:
+\begin{equation}
+L = \frac{\mu_0 N^2 \pi}{l}\left[ (\mu-1) r_K^2 +r^2 \right] 
+\end{equation}
 
 \end{enumerate}
