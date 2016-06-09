@@ -1,4 +1,42 @@
 \section*{\nr.2 \tittwo (10 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item Es gilt nach dem Amèreschen Durchflutungsgesetz ergibt sich
+\begin{equation}
+	\oint \vec{H} d\vec{s} = 2 \pi R H = I\cdot n \Leftrightarrow 
+	H = \frac{I n}{2 pi R} \approx \SI{1591,55}{\ampere \per \meter}
+\end{equation}
+Für des B-Feld gilt
+\begin{equation}
+	B = \mu\mu_0 H = \SI{5}{\tesla}
+\end{equation}
+\item Aus dem Ampèreschen Durchflutungsgesetz ergibt sich
+\begin{equation}
+	\oint \vec{H} d\vec{s} = \int_{Luft} \vec{H} d\vec{s} + \int_{Eisen} \vec{H} 
+	d\vec{s} = I\cdot n.
+\end{equation}
+Die senkrecht Komponente des B-Felds ist erhalten, also gilt B$_{Fe}$ = B$_L$ und $\mu$H$_{Fe}$ = H$_L$. Damit ergibt sich
+\begin{align}
+	&\oint \vec{H} d\vec{s} = H_{Fe}(2 \pi R - d) + H_L d = \frac{H_L}{\mu}
+	(2 \pi R - d) + H_L d. \\ &\Leftrightarrow H_L = \frac{NI\mu}{(\mu - 1)d +2\pi  R} \approx \SI{7.99e5}{\ampere \per \meter}.
+\end{align}
+	Für B$_L$, H$_{Fe}$ und B$_{Fe}$ gilt damit.
+\begin{equation}
+	B_{Fe} = B_L = \mu_0 H_L \approx \SI{1}{\tesla} \quad H_{Fe} = \frac{B_{Fe}}{\mu \mu_0} = \frac{H_L}{\mu} \approx \SI{319,7}{\ampere \per \meter}.
+\end{equation}
+\item Es gilt, da das B-Feld am Übergang zwischen Ring und Magnet stetig,
+\begin{equation}
+	\mu \mu_0 H_{Fe} = B_{Fe} = B_{m} = \mu_0(H_{m} + M) 
+	\Rightarrow \mu H_{Fe} = H_{m} + M
+\end{equation}
+Mit B$_{m}$ die Flussdichte im Magnet bzw. H$_{m}$ Feldstärke im Magnet. Da es keine freien Ströme gibt gilt desweiteren
+\begin{align}
+	&0 = \oint \vec{H} d\vec{s} = H_{Fe}(2  \pi R - a) + H_{m} a = H_{Fe}(2\pi R-a) +
+	\mu H_{Fe} a - M a 
+	\\&\Rightarrow H_{Fe} = \frac{Ma}{2 \pi R+a(\mu -1)} 
+	\approx \SI{3,55}{\ampere \per \meter}.
+\end{align}
+Für das B Feld im Ring gilt dann
+\begin{equation}
+	B_{Fe} = \mu_0 \mu H \approx \SI{1,12e-2}{\tesla}.
+\end{equation}
 \end{enumerate}
