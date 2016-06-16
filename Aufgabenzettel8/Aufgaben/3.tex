@@ -1,4 +1,43 @@
 \section*{\nr.3 \titthree (10 Punkte)}
 \begin{enumerate}[(a)]
+\item Nach der erweiterten Kirchhoffschen Maschenregel gilt:
+\begin{equation}
+\hat{U}_e = R \hat{I} +\frac{1}{i\omega C}\hat{I} \iff \hat{I} =\frac{\hat{U}_e}{R+1/(iwC)}
+\end{equation}
+
+Setzen wir für die Eingangsspannung also $U_e=\hat{U}_e e^{i\omega t}$ an, ergibt sich der Strom durch $I=\hat{I} e^{i\omega t}$. Die Ausgangsspannung ist die Spannung über dem Kondensator, also:
+\begin{equation}
+U_a = \frac{1}{i\omega C}I = \frac{\hat{U}_e}{1+i\omega RC} e^{i\omega t}
+\end{equation}
+Für die Amplitude der Ausgangsspannung ergibt sich
+\begin{equation}
+|\hat{U}_a| = \hat{U}_e \left| \frac{1-i\omega RC}{1+(\omega R C)^2} \right| = \frac{\hat{U}_e}{\sqrt{1+(\omega R C)^2}},
+\end{equation}
+während für die Phasenverschiebung bei Betrachtung von Real- und Imaginärteil von $\hat{U}_a$ die Beziehung
+\begin{equation}
+\tan{\phi} = -\omega R C \iff \phi = -\arctan{\omega R C}
+\end{equation}
+gilt.
 \item
+Für das Verhältnis der Spannungsamplituden gilt mit $\omega_0 := 1/(RC)$:
+\begin{equation}
+\frac{\hat{U}_a}{\hat{U}_e} = \frac{1}{\sqrt{1+(\omega R C )^2}} = \frac{1}{\sqrt{1+(\omega/\omega_0)^2}}
+\end{equation}
+Für die Phasenverschiebung findet sich analog:
+\begin{equation}
+\phi = -\arctan (\omega/\omega_0)
+\end{equation}
+Abbildungen der funktionalen Zusammenhänge sind durch \vref{fig:tiefpassfig} gegeben.
+\begin{figure}[htbp]
+\centering
+\input{output-plotU.tex}\hfill
+\input{output-plotphi.tex}
+\caption{Links das Verhältnis $\hat{U}_a/\hat{U}_e$, rechts die Phasenverschiebung, jeweils in logarithmischer Skalierung der $x$-Achse.}
+\label{fig:tiefpassfig}
+\end{figure}
+
+\item Bei kleinen Frequenzen kann sich der Kondensator teilweise aufladen, wodurch sich eine Potentialdifferenz am Ausgang aufbaut. Das Verhältnis aus Ausgangs- und Eingangsspannung ist dadurch hoch. Bei höheren Frequenzen wirkt der Kondensator als bloßes Kabel, wodurch das obige Verhältnis sinkt.
+
+Betrachtet man den Graphen der Phasenverschiebung, so ist sie negativ. Die Ausgangsspannung eilt also der Eingangsspannung voraus, und zwar umso weiter, je höher die Frequenz ist. 
+
 \end{enumerate}
