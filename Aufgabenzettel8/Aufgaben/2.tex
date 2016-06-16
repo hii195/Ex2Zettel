@@ -1,4 +1,10 @@
 \section*{\nr.2 \tittwo (10 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item Es gilt $I_1 = \frac{U_0}{R_1}$ und $I_2 = \frac{U_0}{R_2}$. Der Strom fließt in beiden Widerständen im Schlatbild von oben nach unten, also insbesondere in die Gleiche Richtung.
+(Skizze fehlt)
+\item Die Spule wirkt der Ursache der B-Feldänderung entgegen, treibt also den Strom weiter. Der Strom fließt jetzt im kleinen Stromkreis $R_1 - R_2 - L$. In $R_2$ bleibt die Stromrichtung gleich, in $R_1$ ist sie umgekehrt, also von unten nach oben.
+\item  Es gilt $U_{ind} = -L\dot{I} = (R_1 + R_2)I \Leftrightarrow \dot{I} + \frac{R_1 + R_2}{L}I = 0$, was mit Anfangsbedingungen auf die Lösung $I = -I_2 \exp{-\frac{R_1 + R_2}{L}t}$ führt. (Skizze fehlt)
+\item Es gilt $U_1' = I_2 R_1$ und $U_2' = I_2 R_2$, mit $I_2$ aus (a) ergibt sich also $U_1' = U_0\frac{R_1}{R_2}$ und $U_2' = U_0$.
+\item Optimalerweise sollte man die Zündkerze zwischen den Punkten 2 und 3 anschließen, da man dann die volle induzierte Spannung $U_1 + U_2$ nutzen kann. Um $U_1 + U_0$ zu maximieren, muss man $U_1$ maximieren, da $U_0$ konstant ist. Also muss man, wie in der Formel aus (d) leicht ersichtlich, $R_2$ sehr klein und $R_1$ sehr groß wählen.
+\item Es gilt $U_h = U_0\frac{R_1}{R_2} + U_0 = \SI{3.003}{\kilo \volt}$. Die Spannung ist unabhängig von der Induktivität, da nach direkt nach der Spule der Strom, der vor dem öffnen des Schalters durch die Spule geflossen ist, wegen Selbstinduktion aufrechterhalten wird. Das geschieht unabhängig von der Beschaffenheit der Spule. Die Induktivität beeinflusst nur, wie schnell der Strom danach abfällt, was fürr die Hochspannung aber irrelevant ist.
 \end{enumerate}
