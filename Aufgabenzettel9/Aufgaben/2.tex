@@ -1,0 +1,80 @@
+\section*{\nr.2 \tittwo (10 Punkte)}
+\begin{enumerate}[(a)]
+\item Mit
+\begin{equation}
+  L=\frac{\mu\mu_0N^2A}{l}
+\end{equation}
+ergeben sich $L_1=1.62\mathrm{H}$ und $L_2=0.005\mathrm{H}$.
+\item Es gilt das Ohmsche Gesetz
+\begin{equation}
+  \hat{U}=\hat{R}\hat{I}
+\end{equation}
+womit sich 
+\begin{equation}
+  I_1(t)=\frac{U_1}{\omega L}\sin \omega t
+\end{equation}
+ergibt.
+Mit angegebener Formel ergibt sich für die mittlere Leistung
+\begin{equation}
+  \bar{P}=f\int_0^{\frac{1}{f}}\frac{U_1^2}{2\omega L}\sin (2\omega t) \mathrm{d}t=0
+\end{equation}
+\item Mit $\phi =LI$ und den Formeln für den unbelasteten Transformator ergibt sich
+\begin{equation}
+  M_{12}=\frac{\phi_1}{I_2}=L_1 \frac{I_1}{I_2}=L_1 \frac{N_2}{N_1}=\frac{\mu\mu_0N_1N_2A}{l}=L_2 \frac{N_1}{N_2}=\frac{\phi_2}{I_1}
+\end{equation}
+außerdem ist
+\begin{equation}
+  M_{12}=\frac{\mu\mu_0N_1N_2A}{l}=\sqrt{\frac{\mu\mu_0N_1^2A}{l}\frac{\mu\mu_0N_2^2A}{l}}=\sqrt{L_1L_2}
+\end{equation}
+
+\item Nach den Gleichungen für den unbelasteten Transformator gilt
+\begin{equation}
+  U_2(t)=\frac{N_2}{N_1}U_1(t)=
+\end{equation}
+
+\item Es gilt
+\begin{equation}
+  U_2(t)=RI_2(t)
+\end{equation}
+mit 
+\begin{equation}
+  U_2(t)=N_2 \dot{\phi}.
+\end{equation}
+Da aber auch
+\begin{equation}
+  U_1(t)=N_1\dot{\phi}
+\end{equation}
+gilt, folgt direkt, dass
+\begin{equation}
+  I_2(t)=\frac{N_2}{RN_1}U_1(t)=\frac{U_1N_2}{RN_1}\cos \omega t.
+\end{equation}
+und damit
+\begin{equation}
+  \dot{I}_2(t)=\frac{\mathrm{d}}{\mathrm{d}t} I_2(t)=-\frac{U_1N_2}{RN_1}\omega \sin \omega t.
+\end{equation}
+
+Das Feld in der Ringspule ist gegeben durch
+\begin{equation}
+  \phi=\frac{L_1}{N_1}I_1-\frac{L_2}{N_2}I_2
+\end{equation}
+woraus folgt, dass
+\begin{equation}
+  \dot{\phi}=\frac{L_1}{N_1}\dot{I_1}-\frac{L_2}{N_2}\dot{I_2}=\frac{R}{N_2}I_2(t),
+\end{equation}
+wobei das negative Vorzeichen aus der Definition der Richtung der Ströme kommt, in diesem Fall in unterschiedliche Richtungen.
+Daraus folgt, dass 
+\begin{equation}
+  \dot{I}_1(t)=\frac{N_1}{L_1}\left(\frac{R}{N_2}I_2(t) + \frac{L_2}{N_2}\dot{I}_2(t)\right)=\frac{U_1}{L_1}\cos \omega t - \frac{L_2U_1}{L_1R}\omega \sin \omega t.
+\end{equation}
+Damit ergibt sich schließlich
+\begin{equation}
+  I_1(t)=\int \dot{I}_1(t) \mathrm{d}t=\frac{U_1}{\omega L_1} \sin \omega t+\frac{L_2U_1}{L_1R}\cos \omega t.
+\end{equation}
+\item Die Leistung ergibt sich als
+\begin{align}
+  P&=\frac{\omega}{2\pi}\int_{0}^{\frac{2\pi}{\omega}}U_1(t)I_1(t)\mathrm{d}t\\
+  &=\frac{\omega}{2\pi}\int_{0}^{\frac{2\pi}{\omega}}U_1 \cos \omega t\left(\frac{U_1}{\omega L_1} \sin \omega t+\frac{L_2U_1}{L_1R}\cos \omega t\right)\mathrm{d}t\\
+  &= \frac{L_2U_1^2}{2L_1R}.
+\end{align}
+
+\end{enumerate}
