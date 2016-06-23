@@ -1,4 +1,17 @@
 \section*{\nr.4 \titfour (10 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item Aus der Gleichung ergben sich die Parameter k = $\frac{\pi}{2 x_0}$ und $\omega = \frac{4 \pi}{t_0}$ Damitberechnet man $T = \frac{2 \pi}{\omega} = \frac{t_0}{2}$ und $\lambda = \frac{2 \pi}{k} = 4 x_0$.
+\item Es gilt 
+\begin{equation}
+	y(x,t) = \frac{A}{2} \left( \sin \left( \frac{x\pi}{2 x_0} - 4 \pi \frac{t}{t_0} \right) +\sin \left(\frac{x\pi}{2 x_0} +4 \pi \frac{t}{t_0}\right) \right)
+\end{equation}
+Man definiert $\xi_1 (x,t) = \sin \left( \frac{x\pi}{2 x_0} - 4 \pi \frac{t}{t_0} \right)$ und $\xi_2 (x,t) = \sin \left( \frac{x\pi}{2 x_0} + 4 \pi \frac{t}{t_0} \right)$. Die Ausbreitungsgeschwindigkeit von $\xi_1$ ist $c_1 = \frac{\lambda}{T} = 8 \frac{x_0}{t_0}$, die Ausbreitungsgeschwindogkeit von $\xi_2$ äquivalent dazu $c_2 = -\frac{\lambda}{T} =-8 \frac{x_0}{t_0}$. Die Ausbreitungsgeschwindigkeit der resultiernden Welle ist die Summe der Ausbreitungsgeschwindigkeiten der Einzelwellen , d.h $c_{ges} = 0$. Daran sieht man sofort, dass es sich um eine stehende Welle handeln muss.
+\item Für die Knotenpunkte  muss $y(x_n, t) = 0$ für alle Zeiten t gelten. Allgemein muss also gelten
+\begin{equation}
+	\sin \left( \pi\frac{x_n}{2 x_0}  \right) = 0 \Leftrightarrow \pi\frac{x_n}{2 x_0} = k\pi, k \in \mathbb{Z} \Leftrightarrow x_n = k 2 x_0 = k \frac{\lambda}{2}, k \in \mathbb{Z}.
+\end{equation}
+Für die Wellenbäuche muss $\sin \left( \pi\frac{x'_n}{2 x_0}  \right)$ maximal werden, d.h.
+\begin{equation}
+	\pi\frac{x'_n}{2 x_0} = (k+\frac{1}{2})\pi, k \in \mathbb{Z} \Leftrightarrow x_n = (k+\frac{1}{2})2 x_0,  k \in \mathbb{Z}.
+\end{equation}
 \end{enumerate}
