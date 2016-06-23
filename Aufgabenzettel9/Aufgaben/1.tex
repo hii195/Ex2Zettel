@@ -1,5 +1,55 @@
 \section*{\nr.1 \titone (10 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item Die Kirchhoffschen Regeln liefern mit $U-U_\text{ind}=U_\text{R} + U_\text{C}$:
+\begin{equation}
+U - L \dot{I} = R I + \frac{Q}{C} \implies  \ddot{I} + \frac{R}{L}\dot{I} +\frac{1}{CL}I = \frac{1}{L}\dot{U}
+\end{equation}
+\item Der Ansatz $U=U_0e^{i\omega t}$ und $I=I_0e^{i(\omega t -\phi)}$ führt zur Bedingung:
+\begin{equation}
+I_0 \left( -\omega^2+\frac{R}{L}i\omega \frac{1}{LC} \right) = i\omega \frac{U_0}{L}e^{i\phi}
+\end{equation}
+Vergleich von Real- und Imaginärteil liefert:
+\begin{align}
+-I_0 \omega^2 + \frac{I_0}{LC} &= -\frac{\omega U_0}{L}\sin{\phi} \label{eq:real}\\
+I_0 \frac{R}{L}\omega &= \frac{\omega U_0}{L}\cos{\phi}\label{eq:imag}
+\end{align}
 
+Dividiert man diese Bedingungen durcheinander, erhält man:
+\begin{equation}
+\tan{\phi} = \frac{L\omega}{R} -\frac{1}{RC\omega} \implies \phi =\arctan\left(\frac{L\omega}{R} -\frac{1}{RC\omega} \right)
+\end{equation}
+ Quadriert man stattdessen \vref{eq:real,eq:imag} und addiert das Ergebnis, ergibt sich nach kurzer Umformung:
+ \begin{equation}
+I_0 = \frac{\omega U_0}{L\sqrt{\left(\frac{1}{LC} -\omega^2 \right)^2+\frac{R^2\omega^2}{L^2}}}
+\end{equation}
+
+Für den Strom $I(t) = I_0 \cos{(\omega t-\phi)}$ erhält man somit:
+\begin{equation}
+I(t) = \frac{\omega U_0}{L\sqrt{\left(\frac{1}{LC} -\omega^2 \right)^2+\frac{R^2\omega^2}{L^2}}} \cos{\left(\omega t-\arctan\left(\frac{L\omega}{R} -\frac{1}{RC\omega} \right)\right)}
+\end{equation}
+
+\item Zur Ermittlung der Resonanzfrequenz muss $I_0$ partiell nach $\omega$ abgeleitet werden und gleich Null gesetzt werden. Anwendung der Quotientenregel der Differentialrechnung und elementare Umformungen liefern:
+\begin{equation}
+\omega_0 = \frac{1}{\sqrt{LC}}
+\end{equation}
+
+\item Für die Phasenverschiebung im Falle der Resonanz ergibt sich
+\begin{equation}
+\tan{\phi} = \frac{L\omega_0}{R} -\frac{1}{RC\omega_0} = 0.
+\end{equation}
+Also ist die Phasenverschiebung entweder $0$ oder $\pi$. Ein Blick auf \vref{eq:imag} ergibt schnell, dass $\phi = 0$ betragen muss, wenn $R$ und $U_0$ positiv sind.
+\item 
+Im Resonanzfall gilt für den Strom:
+\begin{equation}
+I(t)=\frac{\omega_0 U_0}{L\sqrt{\left(\frac{1}{LC} -\omega_0^2 \right)^2+\frac{R^2\omega_0^2}{L^2}}}e^{i(\omega_0 t +0)} = \frac{U_0}{R} e^{{\frac{it}{\sqrt{LC}}}}
+\end{equation}
+Also gilt für die Spannung am Kondensator:
+\begin{equation}
+U_C = \frac{1}{i\omega_0 C} \frac{U_0}{R}e^{{\frac{it}{\sqrt{LC}}}} = -\frac{U_0}{\omega_0CR} e^{i\left(t/\sqrt{LC} +\pi/2 \right)}
+\end{equation}
+
+Für die Spannungsamplitude gilt demnach:
+\begin{equation}
+U_{C,0} = \frac{U_0}{\omega_0CR} = \frac{U_0}{R}\sqrt{\frac{L}{C}}
+\end{equation}
 \end{enumerate}
