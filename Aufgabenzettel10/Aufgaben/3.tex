@@ -1,4 +1,66 @@
 \section*{\nr.3 \titthree (10 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item Nach den Maxwell-Gleichungen gilt bei Abwesenheit von Ladungen und Strömen:
+\begin{equation}
+\nabla \times \vec{E} = -\frac{\partial\vec{B}}{\partial t} \implies \frac{\partial}{\partial t} \nabla \times \vec{E} = -\frac{\partial^2\vec{B}}{\partial t^2} 
+\end{equation}
+Andererseits gilt:
+\begin{equation}
+\nabla \times \left(\nabla \times \vec{B}\right) = \nabla \times \left(\epsilon_0 \mu_0 \frac{\partial}{\partial t} \vec{E} \right) = \epsilon_0 \mu_0 \frac{\partial}{\partial t}\left(\nabla \times  \vec{E} \right)
+\end{equation}
+Also folgt:
+\begin{equation}
+\frac{1}{\epsilon_0\mu_0}\nabla \times \left(\nabla \times \vec{B}\right) = -\frac{\partial^2\vec{B}}{\partial t^2}
+\end{equation}
+Nach der bac-cab-Regel gilt die Identität:
+\begin{equation}
+\nabla \times \left(\nabla \times \vec{B}\right) = \nabla(\nabla \cdot \vec{B})- (\nabla \cdot \nabla) \vec{B}= -\Delta \vec{B}
+\end{equation}
+Es folgt unmittelbar die Wellengleichung für das magnetische Feld:
+\begin{equation}
+\Delta \vec{B}= \epsilon_0 \mu_0 \frac{\partial^2\vec{B}}{\partial t^2} 
+\end{equation}
+\item Einsetzen in die Wellengleichung ergibt, dass $\vec{B} = \hat{e}_x \cdot B_0 \cos{(\omega t - kz)}$ sie löst, falls $k^2 = \epsilon_0 \mu_0 \omega^2 \iff k=\omega/c$ gilt.
+
+\item Man sieht schnell, dass
+\begin{equation}
+-\dot{\vec{B}} = \hat{e}_x \cdot B_0 \omega \sin{(\omega t - kz)}
+\end{equation}
+gilt. Also ist nur die $x$-Komponente von $\nabla \times \vec{E}$ nichtverschwindend: 
+\begin{equation}
+\nabla \times \vec{E} = \hat{e}_x (\partial_y E_z -\partial_z E_y)
+\end{equation}
+$\partial_y E_z$ verschwindet, da die elektromagnetische Welle polarisiert und eben ist und sich in $z$-Richtung bewegt. Es folgt $E_y= -\frac{\omega}{k}B_0\cos (\omega t - kz)$. Die Randbedingungen lassen sich so wählen, dass die anderen Komponenten verschwinden, also gilt:
+\begin{equation}
+\vec{E} = \hat{e}_y \left( -\frac{\omega}{k}B_0 \right) \cos (\omega t - kz)
+\end{equation}
+
+\item Für den Poynting-Vektor gilt:
+\begin{equation}
+\vec{S} = \frac{1}{\mu_0} \left(\vec{E} \times \vec{B} \right) = \hat{e}_z \left(\frac{\omega B_0^2}{\mu_0 k} \cos^2 (\omega t - kz) \right)
+\end{equation}
+Für die mittlere Intensität folgt:
+\begin{equation}
+<S> = \frac{\omega B_0^2}{\mu_0 k} \underbrace{<\cos^2 (\omega t - kz)>}_{\pi/\omega} = \frac{\pi B_0^2}{\mu_0 k}
+\end{equation}
+\item Für festes $z$, also etwa für $z=0$ ist $\vec{E}= E_0 (\sin{\omega t},\cos{\omega t},0)^T$ ein Vektor, der eine Kreisbahn in der $x$-$y$-Ebene parametrisiert.
+\item Berechnen wir zunächst das zugehörige magnetische Feld. Es gilt:
+\begin{equation}
+\dot{\vec{E}} = \hat{e}_x \omega E_0 \cos{(\omega t - kz)} - \hat{e}_y \omega E_0 \sin{(\omega t - kz)}
+\end{equation}
+Also folgt, analog zu oben:
+\begin{align}
+\partial_y B_z - \partial_z B_y &= \epsilon_0 \mu_0 \omega E_0 \cos{(\omega t - kz)}\\
+\partial_z B_x - \partial_x B_z &= -\epsilon_0 \mu_0 \omega E_0 \sin{(\omega t - kz)}
+\end{align}
+$\partial_y B_z= \partial_x B_z = 0$, da für $\vec{B}$ als Transversalwelle $B_z$ verschwindet. Also folgt:
+\begin{equation}
+\vec{B} = -\hat{e}_x \epsilon_0 \mu_0\frac{\omega}{k}E_0 \cos{(\omega t - kz)}+\hat{e}_y \epsilon_0 \mu_0\frac{\omega}{k}E_0 \sin{(\omega t - kz)}
+\end{equation}
+
+Für den Poynting-Vektor folgt:
+\begin{equation}
+\vec{S} = \hat{e}_z\epsilon_0 \mu_0\frac{\omega}{k} E_0^2 =\hat{e}_z\epsilon_0 c E_0^2 
+\end{equation}
+Anders als in d) ist die Intensität nun also zeitlich konstant. 
 \end{enumerate}
