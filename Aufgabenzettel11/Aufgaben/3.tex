@@ -1,8 +1,20 @@
 \section*{\nr.3 \titthree (10 Punkte)}
 \begin{enumerate}[(a)]
-
-
+\item Es gilt $\varphi = 2\pi\frac{\Delta s}{\lambda}$ und $\Delta s = \sin{\alpha }g$. Daraus folgt
+\begin{equation}
+	\varphi = 2\pi\sin{\alpha}\frac{g}{\lambda}.
+\end{equation}
+\item Die k-te Welle hat eine Phasenverschiebung von $n\varphi$ (gezählt von 0 bis n-1). Daraus ergibt sich für die k-te Welle die komplexe Darstellung $e^{ik\varphi}$. Damit folgt
+\begin{equation}
+	E = E_0 \sum_{k=0}^{n-1} e^{ik\varphi} = E_0 \frac{e^{in\varphi} - 1}{e^{i\varphi}  - 1} = E_0 e^{i\frac{n-1}{2}\varphi}\frac{\sin{\frac{n}{2}\varphi}}{sin{\frac{\varphi}{2}}}.
+\end{equation}
+Da $|e^{i\frac{n-1}{2}\varphi}| = 1$ gilt
+\begin{equation}
+	I \propto |E|^2 = E_0^2 \frac{\sin^2{\frac{n}{2}\varphi}}{\sin^2{\frac{\varphi}{2}}}
+\end{equation}
 % @ Raphael, hier die Skizze, bau es ein wie es dir passt!
+% @ Kianusch, danke, auch wenn du das niemals lesen wirst :P
+
 \item
 \begin{figure}[htbp]
 \centering
