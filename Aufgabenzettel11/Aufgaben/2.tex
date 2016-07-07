@@ -1,4 +1,40 @@
 \section*{\nr.2 \tittwo (10 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item Es gilt mithilfe einfacher Geometrie
+\begin{equation}
+  \sin \alpha = \frac{\delta}{x}
+\end{equation}
+wobei sich mit $\delta = \frac{\lambda \varphi}{2\pi}$ ergibt, dass
+\begin{equation}
+  \varphi = \frac{2\pi x \sin \alpha}{\lambda}.
+\end{equation}
+\item Es ergibt sich
+\begin{align}
+P(x)&=\langle E_1(t)E_2^{*}(t) \rangle\\
+    &=\langle E_0\exp(ik(\bar x+\delta)-i\omega t)E_0\exp(-ik(\bar x)+i\omega t) \rangle\\
+    &=\langle E_0^2\exp(ik\sin \alpha x) \rangle\\
+    &=E_0^2 \cos (k\sin(\alpha)x)
+\end{align}
+\begin{figure}[htbp]
+\centering
+\includegraphics{plot.pdf}
+\caption{Verlauf des Signals.}
+\label{fig:signal}
+\end{figure}
+
+Dieser Verlauf ist in \vref{fig:signal} veranschaulicht.
+
+\item Es gilt
+\begin{align}
+  P(x)=P_1(x)+P_2(x)&= E_0^2\cos(k\alpha_1x)+E_0^2\cos(k\alpha_2x)\\
+    &=2E_0^2\cos \left( \frac{kx}{2}(\alpha_1-\alpha_2)\right)\cos \left( \frac{kx}{2}(\alpha_1+\alpha_2) \right)
+\end{align}
+
+\item Die Schwebung lässt sich am besten nachweisen, wenn x die halbe Einhüllende der Schwebung ist, woraus folgt, dass
+\begin{equation}
+  \Delta \alpha = \frac{c}{\nu x}
+\end{equation}
+
+\item  Damit ergibt sich eine Winkelauflösung für das Very Long Baseline Array von $\Delta \alpha = 0.0003$.
+
 \end{enumerate}
