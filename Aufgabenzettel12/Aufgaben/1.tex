@@ -1,5 +1,52 @@
 \section*{\nr.1 \titone (10 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item Die Zeit die der Lichtstrahl von A nach B benötigt ergibt sich als
+\begin{equation}
+  t=\frac{n_1}{c}\sqrt{a^2+x^2}+\frac{n_2}{c}\sqrt{b^2+(d-x)^2}
+\end{equation}
+mit $\frac{\mathrm{d}t}{\mathrm{d}x}=0$ ergibt sich
+\begin{equation}
+  \frac{n_1}{c}\frac{x}{\sqrt{a^2+x^2}}=\frac{n_2}{c}\frac{d-x}{\sqrt{b^2+(d-x)^2}}
+\end{equation}
+woraus direkt
+\begin{equation}
+  n_1\sin \alpha_1 =n_2\sin \alpha_2
+\end{equation}
+folgt.
+
+Man betrachte nun den reflektierten Lichtstrahl.
+Die Zeit 
+\begin{equation}
+  t=\frac{x}{c\sin\alpha}+\frac{d-x}{c\sin\beta}
+\end{equation}
+muss dafür gemäß dem Fermatschen Prinzip extremal werden. Aus $\frac{\mathrm{d}t}{\mathrm{d}x}=0$ folgt nun direkt $\alpha=\beta$, das bekannte Reflektionsgesetz.
+
+\item Dieses Reflektionsgesetz soll nun für die Parametrisierung des Parabolspigels benutzt werden. Seien im folgenden $\alpha$ der Winkel zwischen dem einfallenden Lichtstrahl zum lokalen Lot und $\gamma$ der Winkel zwischen der $y$-Achse und dem reflektierten Strahl.
+Es gelten dann mit einfachen geometrischen Überlegungen
+\begin{equation}
+  \gamma=90^{\circ}-2\alpha,
+\end{equation}
+\begin{equation}
+  \alpha = \arctan\left(\frac{\mathrm{d}x}{\mathrm{d}y}\right)
+\end{equation}
+sowie 
+\begin{equation}
+  \tan \gamma=\frac{f-x}{y}.
+\end{equation}
+Damit ergibt sich 
+\begin{align}
+  &\arctan\left(\frac{f-x}{y}\right)=\frac{\pi}{2}-2\arctan\left(\frac{\mathrm{d}x}{\mathrm{d}y}\right)\\
+  &\iff \frac{f-x}{y}=\cot\left(2\arctan\left(\frac{\mathrm{d}x}{\mathrm{d}y}\right)\right)\\
+  &\iff f-x=\frac{y\left(1-\left(\frac{\mathrm{d}x}{\mathrm{d}y}\right)^2\right)}{2\left(\frac{\mathrm{d}x}{\mathrm{d}y}\right)}\\
+  &\iff x(y)=f-\frac{y\left(1-\left(\frac{\mathrm{d}x}{\mathrm{d}y}\right)^2\right)}{2\left(\frac{\mathrm{d}x}{\mathrm{d}y}\right)}
+\end{align}
+Diese Differentialgleichung wird durch die Funktion
+\begin{equation}
+  x(y)=ay^2+b
+\end{equation}
+gelöst. Mit $x(0)=0$ und $x(y_f)=f\implies x'(y_f)=\pm1$ ergeben sich $a=\frac{f}{4}$ und $b=0$ und damit die Parametrisierung für den Spiegel
+\begin{equation}
+  x(y)=\frac{f}{4}y^2
+\end{equation}
 
 \end{enumerate}
